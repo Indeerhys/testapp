@@ -1,0 +1,32 @@
+
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+  </li>
+<% end %>
+
+<h1>Worker#show</h1>
+<p>Find me in app/views/worker/show.html.erb</p>
+
+<div>
+  <%= link_to "Delete",{:action => 'destroy', :id => @worker.id}, :method => :delete %>
+
+</div>
+
+<%= link_to 'Edit', {:action => 'edit', :id => @worker.id} %>
+
+<table>
+    <tr>
+      <td>
+        <%= @worker.full_name %>
+      </td>
+      <td>
+        <%= @worker.worker_level %>
+      </td>
+      <td>
+        <%= @worker.location %>
+      </td>
+    </tr>
+</table>
+
+<%= link_to('Go Back', {:action => 'index'}) %>

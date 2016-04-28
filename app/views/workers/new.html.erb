@@ -1,0 +1,30 @@
+<h1>Worker#new</h1>
+<p>Find me in app/views/worker/new.html.erb</p>
+
+<%= form_for(:worker, :url => {:action => 'create'}) do |w| %>
+  <table>
+    <tr>
+      <th> Worker's Full Name </th>
+      <td>
+        <%= w.text_field(:full_name) %>
+      </td>
+    </tr>
+    <tr>
+      <th> Worker's Level (e.g Padawan)</th>
+      <td>
+        <%= w.text_field(:worker_level) %>
+      </td>
+    </tr>
+    <tr>
+      <th> Worker's Location </th>
+      <td>
+        <%= w.text_field(:location) %>
+      </td>
+    </tr>
+    <div class="button">
+      <%= submit_tag("Save this worker") %>
+    </div>
+  </table>
+<% end %>
+
+<%= link_to('Go Back', {:action => 'index'}) %>
