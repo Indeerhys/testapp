@@ -1,30 +1,40 @@
-<h1>Worker#new</h1>
-<p>Find me in app/views/worker/new.html.erb</p>
+<%= stylesheet_link_tag "index.css" %>
 
-<%= form_for(:worker, :url => {:action => 'create'}) do |w| %>
-  <table>
-    <tr>
+<div 'tophead'>
+<% if user_signed_in? %>
+<div class = 'logout'>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "button") %>
+</div>
+<div class='back'>
+<%= link_to('Go Back', {:action => 'index'}, :class => 'button') %>
+</div>
+<% end %>
+<h1 class='header'>Indee</h1>
+</div>
+<div class='newmainbody'>
+  <p class='inserthead'>Insert appropriate information below.</p>
+
+  <%= form_for(:worker, :url => {:action => 'create'}) do |w| %>
+  <table class = 'newtable'>
+    <tr class='rowheight'>
       <th> Worker's Full Name </th>
       <td>
-        <%= w.text_field(:full_name) %>
+        <%= w.text_field(:full_name, :size => 50, :class => "input") %>
       </td>
     </tr>
-    <tr>
+    <tr class='rowheight'>
       <th> Worker's Level (e.g Padawan)</th>
-      <td>
-        <%= w.text_field(:worker_level) %>
+      <td id='input'>
+        <%= w.text_field(:worker_level, :size => 50, :class => "input") %>
       </td>
     </tr>
-    <tr>
+    <tr class='rowheight'>
       <th> Worker's Location </th>
       <td>
-        <%= w.text_field(:location) %>
+        <%= w.text_field(:location, :size => 50, :class => "input") %>
       </td>
     </tr>
-    <div class="button">
-      <%= submit_tag("Save this worker") %>
-    </div>
-  </table>
-<% end %>
 
-<%= link_to('Go Back', {:action => 'index'}) %>
+  </table>
+    <%= submit_tag("Save this worker", :class => "save") %>
+<% end %>

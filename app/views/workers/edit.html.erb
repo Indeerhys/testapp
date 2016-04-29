@@ -1,27 +1,40 @@
-<h1>Worker#edit</h1>
-<p>Find me in app/views/worker/edit.html.erb</p>
+<%= stylesheet_link_tag "index.css" %>
+<div 'tophead'>
+<% if user_signed_in? %>
+<div class = 'logout'>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "button") %>
+</div>
+<div class='logout'>
+<%= link_to('Go Back', {:action => 'index'}, :class => 'button') %>
+</div>
+<% end %>
+
+<h1 class='header'>Indee</h1>
+<div class='newmainbody'>
+<p class='inserthead'>Edit appropriate information.</p>
 <%= form_for(@worker) do |w| %>
-  <table>
+  <table class='newtable'>
     <tr>
       <th> Worker's Full Name </th>
       <td>
-        <%= w.text_field(:full_name) %>
+        <%= w.text_field(:full_name, :class => 'input') %>
       </td>
     </tr>
     <tr>
       <th> Worker's Level (e.g Padawan)</th>
       <td>
-        <%= w.text_field(:worker_level) %>
+        <%= w.text_field(:worker_level, :class => 'input') %>
       </td>
     </tr>
     <tr>
       <th> Worker's Location </th>
       <td>
-        <%= w.text_field(:location) %>
+        <%= w.text_field(:location, :class => 'input') %>
       </td>
     </tr>
-    <div class="button">
-      <%= submit_tag("Save this worker") %>
-    </div>
   </table>
+  <div class="save">
+    <%= submit_tag("Save this worker") %>
+  </div>
+</div>
 <% end %>

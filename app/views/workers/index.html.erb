@@ -1,21 +1,38 @@
-  <% if user_signed_in? %>
+<%= stylesheet_link_tag "index.css" %>
+
+<div 'tophead'>
+<% if user_signed_in? %>
+<div class = 'logout'>
   <li>
-    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-  </li>
-  <% end %>
-
-<h1>Worker#index</h1>
-<p>Find me in app/views/worker/index.html.erb</p>
-<%= link_to("Add New Worker", {:action => 'new'}, :class => 'actions new') %>
-
-<table>
-  <% @workers.each do |w| %>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "button") %>
+</li>
+</div>
+<% end %>
+<h1 class='header'>Indee</h1>
+</div>
+<div class='maincontent'>
+  <h4 class= 'secondheader'>Below is a list of current Indee personel.</h4>
+<table class="table">
+    <tr>
+      <th>
+        Full Name
+      </th>
+      <th>
+        More
+      </th>
+    </tr>
+    <% @workers.each do |w| %>
     <tr>
       <td>
-        <%= w.full_name %>
-        <%=link_to('Show more info.', {:action => 'show', :id => w.id}, :class => 'action show')%>
+        <div class='workername'> <%= w.full_name %> </div>
+      </td>
+      <td>
+        <%=link_to('Show more info.', {:action => 'show', :id => w.id}, :class => 'show')%>
       </td>
     </tr>
   <% end %>
 
 </table>
+<br />
+<br />
+<%= link_to("Add a new worker", {:action => 'new'}, :class => 'new') %>

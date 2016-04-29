@@ -1,27 +1,40 @@
+<%= stylesheet_link_tag "index.css" %>
 
+<div 'tophead'>
 <% if user_signed_in? %>
-  <li>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-  </li>
-<% end %>
-
-<h1>Worker#show</h1>
-<p>Find me in app/views/worker/show.html.erb</p>
-
-<div>
-  <%= link_to "Delete",{:action => 'destroy', :id => @worker.id}, :method => :delete %>
-
+<div class = 'logout'>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "button") %>
 </div>
+<div class='logout'>
+<%= link_to('Go Back', {:action => 'index'}, :class => 'button') %>
+</div>
+<% end %>
+<h1 class='header'>Indee</h1>
+</div>
+<div class='newmainbody'>
+<p class='inserthead'>Find me in app/views/worker/show.html.erb</p>
 
-<%= link_to 'Edit', {:action => 'edit', :id => @worker.id} %>
 
-<table>
+<table class='newtable'>
     <tr>
+      <td class='information'>
+        Full Name
+      </td>
       <td>
         <%= @worker.full_name %>
       </td>
+    </tr>
+    <tr>
+      <td class='information'>
+        Worker Level
+      </td>
       <td>
         <%= @worker.worker_level %>
+      </td>
+    </tr>
+    <tr>
+      <td class='information'>
+        Location
       </td>
       <td>
         <%= @worker.location %>
@@ -29,4 +42,9 @@
     </tr>
 </table>
 
-<%= link_to('Go Back', {:action => 'index'}) %>
+<div>
+  <%= link_to "Delete",{:action => 'destroy', :id => @worker.id}, :method => :delete, :class => 'delete' %>
+
+</div>
+
+<%= link_to 'Edit', {:action => 'edit', :id => @worker.id}, :class => 'edit' %>
