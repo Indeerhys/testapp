@@ -34,7 +34,18 @@
         <%= w.text_field(:location, :size => 50, :class => "input") %>
       </td>
     </tr>
-
+    <tr class='rowheight'>
+      <th> Worker's Specialty </th>
+      <td>
+        <%= w.text_field(:specialty, :size => 50, :class => "input") %>
+      </td>
+    </tr>
+    <tr class='rowheight'>
+      <th> Worker's Contact Number </th>
+      <td>
+        <%= w.text_field(:contact_number, :size => 11, :class => "input") %>
+      </td>
+    </tr>
   </table>
     <%= submit_tag("Save this worker", :class => "save") %>
 <% end %>

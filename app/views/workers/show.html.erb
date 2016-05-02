@@ -12,7 +12,7 @@
 <h1 class='header'>Indee</h1>
 </div>
 <div class='newmainbody'>
-<p class='inserthead'>Find me in app/views/worker/show.html.erb</p>
+<p class='inserthead'>Details for <%= @worker.full_name %></p>
 
 
 <table class='newtable'>
@@ -38,6 +38,22 @@
       </td>
       <td>
         <%= @worker.location %>
+      </td>
+    </tr>
+    <tr>
+      <td class='information'>
+        Specialty
+      </td>
+      <td>
+        <%= @worker.specialty %>
+      </td>
+    </tr>
+    <tr>
+      <td class='information'>
+        Contact Number
+      </td>
+      <td>
+        <%= @worker.contact_number %>
       </td>
     </tr>
 </table>

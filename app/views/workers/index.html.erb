@@ -10,10 +10,11 @@
 <% end %>
 <h1 class='header'>Indee</h1>
 </div>
+<img src="indee.jpg">
 <div class='maincontent'>
   <h4 class= 'secondheader'>Below is a list of current Indee personel.</h4>
 <table class="table">
-    <tr>
+    <tr class= 'rowheight'>
       <th>
         Full Name
       </th>
@@ -22,7 +23,7 @@
       </th>
     </tr>
     <% @workers.each do |w| %>
-    <tr>
+    <tr class = 'rowheight'>
       <td>
         <div class='workername'> <%= w.full_name %> </div>
       </td>

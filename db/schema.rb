@@ -38,8 +38,10 @@ ActiveRecord::Schema.define(version: 20160425165747) do
     t.string   "full_name"
     t.string   "worker_level"
     t.string   "location"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "specialty"
+    t.string   "contact_number"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end
