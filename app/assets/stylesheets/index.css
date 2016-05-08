@@ -1,158 +1,189 @@
 * {
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box;
+}
+
+.indexlink {
 
 }
 
-.header {
-  margin: auto;
-  text-shadow: 5px 5px black 5px;
-  background-color: #E83117;
-  color: white;
-  height: 50px;
-  padding-top: 30px;
-  font-style: bold;
-  width: 100%;
-  padding-left: 20px;
-}
-
-.button {
+.indexlink:hover {
   text-decoration: none;
-  color: #f2f2f2;
-  font-size: 1.2em;
-  padding-right: 10px;
-
+  
 }
 
-.logout {
+.logout-btn {
+  text-decoration: none;
+  color: white;
+  margin: 0 auto;
+}
+
+.login-btn {
+  color: white;
+  text-decoration: none;
+}
+
+.back-btn{
+  text-decoration: none;
+  color: white;
+  margin: 0 auto;
+  border-right: 1px solid white;
+  padding-right: 5px;
+}
+
+.mybutton {
   float: right;
-  right: 0;
-  padding-top: 35px;
-  padding-right: 15px;
-  list-style: none;
-  font-size: 1.5em;
+  margin-right: 25px;
+  padding: 12px;
+  margin-top: 35px;
 }
 
-.secondheader {
-  padding-top: 5%;
-  padding-bottom: 10%;
+#maintitle {
+  margin-bottom: 50px;
+  color: black;
   text-align: center;
-  font-size: 1.8em;
-  font-weight: normal;
-  font-family: 'Metrophobic', Arial, serif; font-weight: 400;
+  display: inline-block;
+  width: 80%;
+  padding-left: 20%;
+  font-size: 4em;
+}
+
+.jumbotron {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 60px;
+}
+
+#jumbo-btn {
+  padding-top: 10px;
+}
+
+.display-4 {
+  text-align: center;
+}
+
+.breaker {
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.minibreaker {
+  width: 60%;
+  margin-bottom: 30px;
 }
 
 .table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.table, th, td {
-  border-bottom: 1px solid #ddd;
-  height: 30px;
+  width: 70%;
+  margin: 0 auto;
   text-align: center;
 }
 
-tr:nth-child(even) {
-  background-color: #f2f2f2;
+.thead {
+  text-align: center;
 }
 
-.show {
+.add-btn {
+  color: white;
   text-decoration: none;
-  color: #E98977;
+  width: 80%;
 }
 
-.new {
-  text-decoration: none;
-  background-color: #f2f2f2;
-  color: black;
-  border-radius: 5px;
-  padding: 5px;
-  border: 1px solid black;
-  float: right;
-  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.25);
-
-}
-
-.maincontent {
+.btn-lg {
   width: 80%;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 
+.inputform {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
 
-.newmainbody {
+.login-form {
   margin: 0 auto;
   text-align: center;
-  width: 70%;
+  width: 80%;
 }
 
-.newtable {
-  margin: auto;
+.login-field {
   width: 100%;
+  height: 50px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 1.3em;
 }
 
-.input {
-  width: 70%;
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: 1px solid black;
-  margin-top: 10px;
-  margin-bottom: 10px;
+.login-label {
+  font-size: 1.3em;
+
+}
+
+.remember {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+  padding-left: 5px;
+}
+
+.remember-box {
+  checkbox-height: 30px;
+}
+
+.login-breaker {
+  margin-bottom: 100px;
+}
+
+.btm-margin {
+  margin-bottom: 50px;
+}
+
+.login-styles {
+  font-size: 1.3em;
 }
 
 .inserthead {
-  margin-top: 5%;
-  margin-bottom: 5%;
   font-size: 1.5em;
-}
-
-.save {
-  float:right;
+  text-align: center;
   margin-top: 50px;
-  height: 50px;
+  font-weight: bold;
 }
 
-.back {
-  position: absolute;
-  left: 0;
-  padding-top: 90px;
-  padding-left: 50px;
+.newmainbody {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
 }
 
+.newtable {
+  width: 100%;
+}
 
 .information {
-  width: 50%;
-  height: 30px;
-  font-weight: bold;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.edit {
-  text-decoration: none;
-  background-color: #f2f2f2;
-  color: black;
-  border-radius: 5px;
-  padding: 5px;
-  border: 1px solid black;
-  float: left;
-  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.25);
-  margin-top: 50px;
-}
-
-.delete {
-  text-decoration: none;
-  background-color: #f2f2f2;
-  color: black;
-  border-radius: 5px;
-  padding: 5px;
-  border: 1px solid black;
-  float: right;
-  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.25);
-  margin-top: 50px;
-}
-
-.rowheight {
   height: 50px;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  width: 50%;
+}
+
+.showbutton {
+  margin-top: 50px;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: white;
+  margin: 0 auto;
+}
+
+#tophead{
+  float: right;
+}
+
+.buttonwidth {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
 }

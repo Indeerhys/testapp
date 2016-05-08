@@ -1,34 +1,47 @@
 <%= stylesheet_link_tag "index.css" %>
 
-<div 'tophead'>
+<h1 id='maintitle' class="display-1">Indee</h1>
+
+
 <% if user_signed_in? %>
-<div class = 'logout'>
-  <li>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "button") %>
-</li>
+    <div id='tophead'>
+      <%= button_to('Logout', destroy_user_session_path, :method => :delete, :class => "btn btn-danger mybutton") %>
+    </div>
+      <% end %>
+
+<div class="jumbotron">
+  <h1 class="display-3">Welcome!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for
+                  calling extra attention to featured content or information.</p>
+  <hr class="m-y-2">
+  <p>It uses utility classes for typography and
+     spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-danger" href="#" role="button">Hide</a>
+  </p>
 </div>
-<% end %>
-<h1 class='header'>Indee</h1>
-</div>
-<img src="indee.jpg">
-<div class='maincontent'>
-  <h4 class= 'secondheader'>Below is a list of current Indee personel.</h4>
-<table class="table">
-    <tr class= 'rowheight'>
-      <th>
+<br />
+<br />
+<div>
+  <h4 class="display-4">Below is a list of current Indee personel.</h4>
+  <hr class="m-y-2 breaker">
+
+<table class="table table-striped">
+    <tr>
+      <th class="thead">
         Full Name
       </th>
-      <th>
+      <th class="thead">
         More
       </th>
     </tr>
     <% @workers.each do |w| %>
-    <tr class = 'rowheight'>
+    <tr>
       <td>
-        <div class='workername'> <%= w.full_name %> </div>
+        <div> <%= w.full_name %> </div>
       </td>
       <td>
-        <%=link_to('Show more info.', {:action => 'show', :id => w.id}, :class => 'show')%>
+        <%=link_to('Show more info.', {:action => 'show', :id => w.id}, :class => 'indexlink show')%>
       </td>
     </tr>
   <% end %>
@@ -36,4 +49,6 @@
 </table>
 <br />
 <br />
-<%= link_to("Add a new worker", {:action => 'new'}, :class => 'new') %>
+<div class='buttonwidth'>
+<%= button_to "Add a new worker", {:action => 'new'}, :class => 'link btn btn-danger btn-lg btn-block' %>
+</div>
