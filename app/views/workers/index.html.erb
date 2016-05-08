@@ -4,18 +4,20 @@
 
 
 <% if user_signed_in? %>
-    <div id='tophead'>
-      <%= button_to('Logout', destroy_user_session_path, :method => :delete, :class => "btn btn-danger mybutton") %>
-    </div>
+<div id='tophead' class="btn-group btn-group-lg mybutton-grp">
+  <%= link_to('Go Back', {:action => 'index'}, :class => 'btn btn-danger') %>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "btn btn-danger") %>
+
+</div>
       <% end %>
 
 <div class="jumbotron">
   <h1 class="display-3">Welcome!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for
-                  calling extra attention to featured content or information.</p>
+  <p class="lead">This is a simple tracking application, the app simply tracks
+    who works for the company and their important information.</p>
   <hr class="m-y-2">
-  <p>It uses utility classes for typography and
-     spacing to space content out within the larger container.</p>
+  <p> This app was my using Ruby on Rails.<br/>
+     Created by Rhys Maughan.</p>
   <p class="lead">
     <a class="btn btn-danger" href="#" role="button">Hide</a>
   </p>
@@ -50,5 +52,5 @@
 <br />
 <br />
 <div class='buttonwidth'>
-<%= button_to "Add a new worker", {:action => 'new'}, :class => 'link btn btn-danger btn-lg btn-block' %>
+<%= link_to "Add a new worker", {:action => 'new'}, :class => 'link btn btn-danger btn-lg btn-block' %>
 </div>

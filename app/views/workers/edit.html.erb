@@ -1,52 +1,64 @@
 <%= stylesheet_link_tag "index.css" %>
-<div 'tophead'>
-<% if user_signed_in? %>
-<div class = 'logout'>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "button") %>
-</div>
-<div class='logout'>
-<%= link_to('Go Back', {:action => 'index'}, :class => 'button') %>
-</div>
-<% end %>
 
-<h1 class='header'>Indee</h1>
-<div class='newmainbody'>
-<p class='inserthead'>Edit appropriate information.</p>
+<div id='tophead' class="btn-group btn-group-lg mybutton-grp">
+  <%= link_to('Go Back', {:action => 'index'}, :class => 'btn btn-danger') %>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "btn btn-danger") %>
+
+</div>
+
+
+<h1 id='maintitle' class="display-1">Indee</h1>
+
+
+  <p class='inserthead'>Insert appropriate information below.</p>
+  <hr class="m-y-2 breaker">
+
+  
 <%= form_for(@worker) do |w| %>
-  <table class='newtable'>
+  <table class='tablewidth'>
     <tr>
-      <th> Worker's Full Name </th>
-      <td>
-        <%= w.text_field(:full_name, :class => 'input') %>
-      </td>
+      <th class='table-head'> Worker's Full Name </th>
     </tr>
     <tr>
-      <th> Worker's Level (e.g Padawan)</th>
       <td>
-        <%= w.text_field(:worker_level, :class => 'input') %>
+        <%= w.text_field(:full_name, :class => 'login-field') %>
       </td>
     </tr>
     <tr>
-      <th> Worker's Location </th>
+      <th class='table-head'> Worker's Level (e.g Padawan)</th>
+    </tr>
+    <tr>
       <td>
-        <%= w.text_field(:location, :class => 'input') %>
+        <%= w.text_field(:worker_level, :class => 'login-field') %>
       </td>
     </tr>
-    <tr class='rowheight'>
-      <th> Worker's Specialty </th>
+    <tr>
+      <th class='table-head'> Worker's Location </th>
+    </tr>
+    <tr>
       <td>
-        <%= w.text_field(:specialty, :size => 50, :class => "input") %>
+        <%= w.text_field(:location, :class => 'login-field') %>
       </td>
     </tr>
-    <tr class='rowheight'>
-      <th> Worker's Contact Number </th>
+    <tr>
+      <th class='table-head'> Worker's Specialty </th>
+    </tr>
+    <tr>
       <td>
-        <%= w.text_field(:contact_number, :size => 11, :class => "input") %>
+        <%= w.text_field(:specialty, :size => 50, :class => 'login-field') %>
+      </td>
+    </tr>
+    <tr>
+      <th class='table-head'> Worker's Contact Number </th>
+    </tr>
+    <tr>
+      <td>
+        <%= w.text_field(:contact_number, :size => 11, :class => 'login-field') %>
       </td>
     </tr>
   </table>
-  <div class="save">
-    <%= submit_tag("Save this worker") %>
+  <div class="buttonwidth">
+    <%= submit_tag("Save this worker", :class => 'link btn btn-danger btn-lg btn-block') %>
   </div>
 </div>
 <% end %>

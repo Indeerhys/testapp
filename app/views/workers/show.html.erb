@@ -2,12 +2,10 @@
 
 
 
-<% if user_signed_in? %>
-  <div id='tophead' class='btn btn-danger mybutton'>
-    <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "link logout-btn") %>
+<div id='tophead' class="btn-group btn-group-lg mybutton-grp">
+  <%= link_to('Go Back', {:action => 'index'}, :class => 'btn btn-danger') %>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "btn btn-danger") %>
 
-  </div>
-<% end %>
 </div>
 
 <h1 id='maintitle' class="display-1">Indee</h1>
@@ -65,10 +63,10 @@
     </tr>
 </table>
 <div class="btn btn-danger btn-lg btn-block showbutton">
-  <%= link_to "Delete",{:action => 'destroy', :id => @worker.id}, :method => :delete, :class => 'link logout-btn' %>
+  <%= link_to "Delete",{:action => 'destroy', :id => @worker.id}, :method => :delete, :class => 'buttonlink link logout-btn' %>
 </div>
 <div class="btn btn-danger btn-lg btn-block showbutton">
-  <%= link_to 'Edit', {:action => 'edit', :id => @worker.id}, :class => 'link logout-btn' %>
+  <%= link_to 'Edit', {:action => 'edit', :id => @worker.id}, :class => 'editlink link logout-btn' %>
 
 </div>
 </div>

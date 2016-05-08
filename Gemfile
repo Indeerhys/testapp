@@ -29,6 +29,9 @@ gem 'jbuilder', '~> 2.0'
 # build Faker:
 gem 'faker'
 
+# Rails panel integration
+gem 'meta_request'
+
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 # Use Capistrano for deployment

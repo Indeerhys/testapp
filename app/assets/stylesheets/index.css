@@ -8,7 +8,7 @@
 
 .indexlink:hover {
   text-decoration: none;
-  
+
 }
 
 .logout-btn {
@@ -35,6 +35,13 @@
   margin-right: 25px;
   padding: 12px;
   margin-top: 35px;
+}
+
+.mybutton-grp {
+  float: right;
+  padding: 12px;
+  margin-top: 20px;
+  width: 20%;
 }
 
 #maintitle {
@@ -147,7 +154,7 @@
 .inserthead {
   font-size: 1.5em;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20px;
   font-weight: bold;
 }
 
@@ -186,4 +193,48 @@
   margin: 0 auto;
   text-align: center;
   margin-bottom: 50px;
+}
+
+.buttonlink {
+  padding-left: 320px;
+  padding-right: 320px;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  margin-left: -15px;
+}
+
+.buttonlink:hover{
+  padding-left: 320px;
+  padding-right: 320px;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  margin-left: -15px;
+}
+
+.editlink {
+  padding-left: 330px;
+  padding-right: 330px;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  margin-left: -15px;
+}
+
+.editlink:hover {
+  padding-left: 330px;
+  padding-right: 330px;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  margin-left: -15px;
+}
+
+.tablewidth {
+  margin: 0 auto;
+  text-align: center;
+  width: 75%;
+}
+
+.table-head {
+  text-align: center;
+  font-size: 1.3em;
+  padding-top: -20px;
 }
